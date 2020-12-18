@@ -12,26 +12,3 @@ code {
     monospace;
 }
 
-#header {
-  background-image: url(https://images.pexels.com/photos/5437412/pexels-photo-5437412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 60rem;
-  text-align: center;
-}
-
-.header-title {
-  padding-top: 20%;
-  color: #fc8621;
-  font-size: 5em;
-  font-family: Sacramento;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
-}
-
-.header-description {
-  color: #fc8621;
-  font-family: Merriweather;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
-}

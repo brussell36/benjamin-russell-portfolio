@@ -1,12 +1,14 @@
 import React from 'react';
+import Contact from './Contact';
 import Header from './Header';
-import NavBar from './NavBar';
+import Projects from './Projects';
 
 export default function LandingPage() {
   return(
     <>
-      <NavBar />
       <Header />
+      <Projects />
+      <Contact />
     </>
   )
 }
