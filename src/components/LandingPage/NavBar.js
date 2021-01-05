@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import '../scss/components/_navbar.scss';
 
 function NavBar() {
 
   return (
     <Navbar sticky="top" expand="lg">
-      <Navbar.Brand href="/">Ben Russell</Navbar.Brand>
+      <Navbar.Brand href="#header">Benjamin Russell</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

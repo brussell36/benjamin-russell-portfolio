@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import '../scss/components/_contact.scss';
 
 export default function Contact() {
   return(

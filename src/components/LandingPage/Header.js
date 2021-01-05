@@ -1,12 +1,11 @@
 import React from 'react';
-import NavBar from './NavBar'
+import '../scss/components/_header.scss'
 
 export default function Header() {
   return(
     <>
       <div id='header'>
-        <NavBar />
-        <h1 className='header-title'>Benjamin Russell</h1>
+        <h1 className='header-title'> I'm Benjamin Russell</h1>
         <h3 className='header-description'>A Full Stack Developer</h3>
       </div>
     </>
