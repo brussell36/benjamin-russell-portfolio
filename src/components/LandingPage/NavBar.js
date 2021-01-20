@@ -6,7 +6,7 @@ import '../scss/components/_navbar.scss';
 function NavBar() {
 
   return (
-    <Navbar sticky="top" expand="lg">
+    <Navbar expand="lg">
       <Navbar.Brand href="#header">Benjamin Russell</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

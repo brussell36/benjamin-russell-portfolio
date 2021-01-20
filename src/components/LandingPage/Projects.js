@@ -11,6 +11,7 @@ import mopop from '../images/mopop-modal-unexpanded-cropped.png';
 import mopopmodal from '../images/mopop-modal-unexpanded.png';
 import mopopexpanded from '../images/mopop-modal-expanded.png';
 import blazers from '../images/blazers-pregame-page-cropped.png';
+import blazersfull from '../images/blazers-pregame-page.png';
 import tindog from '../images/tindog-cropped.png';
 import theorem from '../images/theorem-employee-page.png';
 import '../scss/components/_projects.scss';
@@ -19,12 +20,15 @@ export default function Projects() {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
+  const [showModal4, setShowModal4] = useState(false);
   const handleClose1 = () => setShowModal1(false);
   const handleShow1 = () => setShowModal1(true);
   const handleClose2 = () => setShowModal2(false);
   const handleShow2 = () => setShowModal2(true);
   const handleClose3 = () => setShowModal3(false);
   const handleShow3 = () => setShowModal3(true);
+  const handleClose4 = () => setShowModal4(false);
+  const handleShow4 = () => setShowModal4(true);
 
   return (
     <>
@@ -72,7 +76,7 @@ export default function Projects() {
               <Modal.Body>
                 <Image className='modal-img' src={damerowhome} alt='Damerow Ford Homepage' />
                 <div className='about-project'>
-                  <p>While interning at Threorem Agency, we were tasked with redesigning the homepage of this dealership.<br/> 
+                  <p>While interning at Theorem Agency, we were tasked with redesigning the homepage of this dealership.<br/> 
                     We worked with the inhouse UI/UX designer on what the new page would look like. 
                     The two of us changed the hero image and created the 2 buttons the are on top of the image.<br/> 
                     We also redesigned the FAQ section to use an accordion when a user clicked on one of the questions. 
@@ -113,7 +117,29 @@ export default function Projects() {
             </Modal>
           </div>
           <div className='img-container'>
-            <Image src={blazers} alt='Blazers pregame page' />
+            <Image onClick={handleShow4} src={blazers} alt='Blazers pregame page cropped' />
+            <Modal show={showModal4} onHide={handleClose4} id='mopop-modal' dialogClassName='modal-90w'>
+              <Modal.Header closeButton>
+                <Modal.Title>Blazers News Items</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Image className='modal-img' src={blazersfull} alt='Blazers pregame page' />
+                <div className='about-project'>
+                  <p>I am a native Portlander and I was thrilled to learn that we would be working on the Trailblazers page while at Theorem Agency.
+                    This was the first project I was assigned to work on while there. The site uses a React frontend and we had just completed the React portion of our code school education.
+                    It was great to solidify those skills by working on redesigning the news feed portion of the blazers page. I had to pull the data from an API that the blazers made available to us and display it on the page.
+                    I used bootstrap cards and CSS flexbox to get the look the team wanted for their new news feed. My fellow interns also worked on other portions of this same page.
+                    We collaborated to make sure that everything we were doing would fit in well with each other.<br/>
+                    Go Blazers!
+                  </p>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="success" onClick={handleClose4}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </div>
           <div className='img-container'>
             <Image src={tindog} alt='Tindog' />
