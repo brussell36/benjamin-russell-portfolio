@@ -1,37 +1,127 @@
-import React from 'react';
+import { React, useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
 import gardenhelper from '../images/garden-helper-homepage-cropped.png';
+import gardenhelperhome from '../images/garden-helper-homepage.png';
+import gardenhelpergif from '../images/garden-helper-gif.gif';
 import damerow from '../images/damerow-ford-homepage-cropped.png';
+import damerowhome from '../images/damerow-ford-homepage.png';
 import mopop from '../images/mopop-modal-unexpanded-cropped.png';
+import mopopmodal from '../images/mopop-modal-unexpanded.png';
+import mopopexpanded from '../images/mopop-modal-expanded.png';
 import blazers from '../images/blazers-pregame-page-cropped.png';
 import tindog from '../images/tindog-cropped.png';
 import theorem from '../images/theorem-employee-page.png';
 import '../scss/components/_projects.scss';
 
 export default function Projects() {
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
+  const handleClose1 = () => setShowModal1(false);
+  const handleShow1 = () => setShowModal1(true);
+  const handleClose2 = () => setShowModal2(false);
+  const handleShow2 = () => setShowModal2(true);
+  const handleClose3 = () => setShowModal3(false);
+  const handleShow3 = () => setShowModal3(true);
+
   return (
     <>
       <div id='projects'>
-          <div className='projects-container'>
-            <div className='img-container'>
-              <Image src={gardenhelper} alt='Garden Helper Homepage' />
-            </div>
-            <div className='img-container'>
-              <Image src={damerow} alt='Damerow Ford Homepage' />
-            </div>
-            <div className='img-container'>
-              <Image src={mopop} alt='MoPOP Board of Directors page' />
-            </div>
-            <div className='img-container'>
-              <Image src={blazers} alt='Blazers pregame page' />
-            </div>
-            <div className='img-container'>
-              <Image src={tindog} alt='Tindog' />
-            </div>
-            <div className='img-container'>
-              <Image src={theorem} alt='Theorem employee portal' />
-            </div>
+        <div className='projects-container'>
+          <div className='img-container'>
+            <Image onClick={handleShow1} src={gardenhelper} alt='Garden Helper Homepage Cropped' />
+            <Modal show={showModal1} onHide={handleClose1} id='garden-helper-modal' dialogClassName='modal-90w'>
+              <Modal.Header closeButton>
+                <Modal.Title>Garden Helper</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Image className='modal-img' src={gardenhelperhome} alt='Garden Helper Homepage' />
+                <div className='about-project'>
+                  <p>
+                    This project was conceived as my capstone project to display the skills I learned while attending the Epicodus full stack web development course.
+                    I used a React.js frontend with Google Firebase to handle my backend.<br/>
+                    The application is designed to help new gardeners decide on some plants that will fit the conditions existing in their garden. 
+                    I chose all the plants as ones that I have found are low-maintinence and most are low-water as well.
+                    The search function takes in the variables of sun, water, and soil.
+                    The user gets to choose how much sun they get in their yard.
+                    Then they choose whether they get a lot of rain or almost none and finally they can choose what type of soil they have. 
+                    When the Get Plants! button is clicked it finds which plants in the database match the users specifications and returns them as cards the user can read and decide if they would like those plants.<br/>
+                    There are heart buttons so that if a user likes particular plants they can save them to their favorites and view them on a separate page. 
+                    If the heart button is clicked again it will remove that plant from their favorites.<br/>
+                    I had quite a bit of trouble getting the button to function the way I wanted.
+                    It was difficult to get the button to preform 2 separate functions depending on whether a condition was true or false.
+                  </p>
+                </div>
+                <Image className='modal-img' src={gardenhelpergif} alt='Garden Helper Search Page' />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="success" onClick={handleClose1}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </div>
+          <div className='img-container'>
+            <Image onClick={handleShow2} src={damerow} alt='Damerow Ford Homepage' />
+            <Modal show={showModal2} onHide={handleClose2} id='damerow-modal' dialogClassName='modal-90w'>
+              <Modal.Header closeButton>
+                <Modal.Title>Damerow Ford</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Image className='modal-img' src={damerowhome} alt='Damerow Ford Homepage' />
+                <div className='about-project'>
+                  <p>While interning at Threorem Agency, we were tasked with redesigning the homepage of this dealership.<br/> 
+                    We worked with the inhouse UI/UX designer on what the new page would look like. 
+                    The two of us changed the hero image and created the 2 buttons the are on top of the image.<br/> 
+                    We also redesigned the FAQ section to use an accordion when a user clicked on one of the questions. 
+                    We also worked on a gallery of images that would zoom in when a user hovered over them.<br/> 
+                    There was quite a bit of CSS work involved in all of the aspects we changed.</p>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="success" onClick={handleClose2}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+          <div className='img-container'>
+            <Image onClick={handleShow3} src={mopop} alt='MoPOP Board of Directors page' />
+            <Modal show={showModal3} onHide={handleClose3} id='mopop-modal' dialogClassName='modal-90w'>
+              <Modal.Header closeButton>
+                <Modal.Title>MoPOP Board of Directors</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Image className='modal-img' src={mopopmodal} alt='MoPOP Board of Directors page' />
+                <div className='about-project'>
+                  <p>This project for the MoPOP Board of Directors was created while interning at Theorem Agency. 
+                    I worked closely with the UI/UX designer and built the first mockup to their specifications. 
+                    When it became clear that the initial version was not working quite the way we wanted it to function, we decided to try a couple new ideas.
+                    I pitched an idea to have the cards, when clicked, drop down a description of the person on the board the user had clicked on.
+                    We also thought it would be a good idea to make a modal version so each board member could have the same prominence when a user clicked on their card.
+                    I built out all three versions and we took them to the client and they liked the modal version best. This is the screen shot of that version.</p>
+                </div>
+                <Image className='modal-img' src={mopopexpanded} alt='MoPOP Board of Directors modal expanded' />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="success" onClick={handleClose3}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+          <div className='img-container'>
+            <Image src={blazers} alt='Blazers pregame page' />
+          </div>
+          <div className='img-container'>
+            <Image src={tindog} alt='Tindog' />
+          </div>
+          <div className='img-container'>
+            <Image src={theorem} alt='Theorem employee portal' />
+          </div>
+        </div>
       </div>
     </>
   )
