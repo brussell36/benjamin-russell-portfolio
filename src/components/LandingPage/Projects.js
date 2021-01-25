@@ -23,6 +23,7 @@ export default function Projects() {
   const [showModal3, setShowModal3] = useState(false);
   const [showModal4, setShowModal4] = useState(false);
   const [showModal5, setShowModal5] = useState(false);
+  const [showModal6, setShowModal6] = useState(false);
   const handleClose1 = () => setShowModal1(false);
   const handleShow1 = () => setShowModal1(true);
   const handleClose2 = () => setShowModal2(false);
@@ -33,9 +34,12 @@ export default function Projects() {
   const handleShow4 = () => setShowModal4(true);
   const handleClose5 = () => setShowModal5(false);
   const handleShow5 = () => setShowModal5(true);
+  const handleClose6 = () => setShowModal6(false);
+  const handleShow6 = () => setShowModal6(true);
 
   return (
     <>
+      <h1>My Projects</h1>
       <div id='projects'>
         <div className='projects-container'>
           <div className='img-container'>
@@ -152,7 +156,7 @@ export default function Projects() {
                 <Modal.Title>Tindog</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <Image className='modal-img' src={tindogfull} alt='Blazers pregame page' />
+                <Image className='modal-img' src={tindogfull} alt='Tindog home page' />
                 <div className='about-project'>
                   <p>While deciding if I wanted to invest in my education and attend a code school, I took a class from UDemy.com.
                     I made this page while working on that class. This project helped me learn how to properly use HTML, CSS, and Bootstrap.
@@ -168,7 +172,27 @@ export default function Projects() {
             </Modal>
           </div>
           <div className='img-container'>
-            <Image src={theorem} alt='Theorem employee portal' />
+            <Image onClick={handleShow6} src={theorem} alt='Theorem employee portal' />
+            <Modal show={showModal6} onHide={handleClose6} id='mopop-modal' dialogClassName='modal-90w'>
+              <Modal.Header closeButton>
+                <Modal.Title>Theorem Employee Portal</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Image className='modal-img' src={theorem} alt='Theorem employee portal' />
+                <div className='about-project'>
+                  <p>During my internship at Theorem Agency they had an employee portal that had been designed, but had almost no styling.
+                    I was tasked with making the pages look like the UI/UX designer was envisioning they would look like.
+                    They all look like dashboards with quicklinks on the left hand side of the page. The data is not dynamic yet as they had not created the API I needed to utilize to get the proper information to show.
+                    This project used React. Bootstrap was used heavily for the styles as well as SCSS for all of the custom styles.
+                  </p>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="success" onClick={handleClose6}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </div>
         </div>
       </div>

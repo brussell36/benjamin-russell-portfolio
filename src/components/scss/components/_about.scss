@@ -1,0 +1,12 @@
+@import '../main.scss';
+
+#about {
+  text-align: center;
+  height: 20em;
+  background-color: #fc8621;
+
+  .about-title {
+    font-size: 3em;
+    padding-top: 5%;
+  }
+}
