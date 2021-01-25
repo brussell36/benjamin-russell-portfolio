@@ -64,6 +64,7 @@ export default function Projects() {
                     If the heart button is clicked again it will remove that plant from their favorites.<br/>
                     I had quite a bit of trouble getting the button to function the way I wanted.
                     It was difficult to get the button to preform 2 separate functions depending on whether a condition was true or false.
+                    Here is a link to the live version of the site <a href='https://garden-helper-98c3b.web.app/' target='_blank' rel='noreferrer'>Garden Helper.</a>
                   </p>
                 </div>
                 <Image className='modal-img' src={gardenhelpergif} alt='Garden Helper Search Page' />
@@ -89,7 +90,8 @@ export default function Projects() {
                     The two of us changed the hero image and created the 2 buttons the are on top of the image.<br/> 
                     We also redesigned the FAQ section to use an accordion when a user clicked on one of the questions. 
                     We also worked on a gallery of images that would zoom in when a user hovered over them.<br/> 
-                    There was quite a bit of CSS work involved in all of the aspects we changed.</p>
+                    There was quite a bit of CSS work involved in all of the aspects we changed.
+                    Here is a link to the live page <a href='https://www.damerowford.com/2021-ford-bronco.html' target='_blank' rel='noreferrer'>Damerow Ford.</a></p>
                 </div>
               </Modal.Body>
               <Modal.Footer>
@@ -161,6 +163,7 @@ export default function Projects() {
                   <p>While deciding if I wanted to invest in my education and attend a code school, I took a class from UDemy.com.
                     I made this page while working on that class. This project helped me learn how to properly use HTML, CSS, and Bootstrap.
                     There was still much to learn, but this class helped me decide to go on to code school and round out my education.
+                    Here is a link to the live page <a href='https://brussell36.github.io/tindog/' target='_blank' rel='noreferrer'>Tindog.</a>
                   </p>
                 </div>
               </Modal.Body>
