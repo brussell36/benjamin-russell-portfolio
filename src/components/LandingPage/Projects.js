@@ -13,6 +13,7 @@ import mopopexpanded from '../images/mopop-modal-expanded.png';
 import blazers from '../images/blazers-pregame-page-cropped.png';
 import blazersfull from '../images/blazers-pregame-page.png';
 import tindog from '../images/tindog-cropped.png';
+import tindogfull from '../images/tindog.png';
 import theorem from '../images/theorem-employee-page.png';
 import '../scss/components/_projects.scss';
 
@@ -21,6 +22,7 @@ export default function Projects() {
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
   const [showModal4, setShowModal4] = useState(false);
+  const [showModal5, setShowModal5] = useState(false);
   const handleClose1 = () => setShowModal1(false);
   const handleShow1 = () => setShowModal1(true);
   const handleClose2 = () => setShowModal2(false);
@@ -29,6 +31,8 @@ export default function Projects() {
   const handleShow3 = () => setShowModal3(true);
   const handleClose4 = () => setShowModal4(false);
   const handleShow4 = () => setShowModal4(true);
+  const handleClose5 = () => setShowModal5(false);
+  const handleShow5 = () => setShowModal5(true);
 
   return (
     <>
@@ -142,7 +146,26 @@ export default function Projects() {
             </Modal>
           </div>
           <div className='img-container'>
-            <Image src={tindog} alt='Tindog' />
+            <Image onClick={handleShow5} src={tindog} alt='Tindog' />
+            <Modal show={showModal5} onHide={handleClose5} id='mopop-modal' dialogClassName='modal-90w'>
+              <Modal.Header closeButton>
+                <Modal.Title>Tindog</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Image className='modal-img' src={tindogfull} alt='Blazers pregame page' />
+                <div className='about-project'>
+                  <p>While deciding if I wanted to invest in my education and attend a code school, I took a class from UDemy.com.
+                    I made this page while working on that class. This project helped me learn how to properly use HTML, CSS, and Bootstrap.
+                    There was still much to learn, but this class helped me decide to go on to code school and round out my education.
+                  </p>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="success" onClick={handleClose5}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </div>
           <div className='img-container'>
             <Image src={theorem} alt='Theorem employee portal' />
