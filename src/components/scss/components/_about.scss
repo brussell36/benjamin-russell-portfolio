@@ -2,11 +2,29 @@
 
 #about {
   text-align: center;
-  height: 20em;
   background-color: #fc8621;
-
+  padding-bottom: 5%;
+  
   .about-title {
     font-size: 3em;
     padding-top: 5%;
+    padding-bottom: 2%;
+  }
+
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .about-text {
+      width: 76%;
+      padding-top: 2%;
+    }
+
+    .about-img {
+      width: 20%;
+      border-radius: 100%;
+      margin-right: 2%;
+    }
   }
 }
