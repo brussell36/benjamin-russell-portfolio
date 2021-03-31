@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     flex-direction: row;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
       justify-content: center;
     }
 
@@ -24,7 +24,7 @@
       width: 76%;
       padding-top: 2%;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
         width: 90%;
         font-size: 14px;
       }
@@ -35,7 +35,7 @@
       border-radius: 100%;
       margin-right: 2%;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
         width: 80%;
       }
     }
